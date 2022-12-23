@@ -1,10 +1,11 @@
 import {
+  SourceCodeTransformer,
   transformerCompileClass,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 
-export const transformers = [
+export const transformers: SourceCodeTransformer[] = [
   transformerVariantGroup(),
   transformerDirectives(),
   transformerCompileClass(),

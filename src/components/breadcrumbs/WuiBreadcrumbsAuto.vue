@@ -5,10 +5,10 @@
 </template>
 
 <script setup lang="ts">
+import type { WyrdNavItem } from '@as1024/types'
 import { defineProps, computed, PropType } from 'vue'
 import { useRoute } from 'vue-router'
 
-import type { WyrdNavItem } from '../../ui.types'
 import WuiNav from '../nav/WuiNav.vue'
 import WuiBreadcrumbs from './WuiBreadcrumbs.vue'
 

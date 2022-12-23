@@ -15,10 +15,9 @@
 </template>
 
 <script lang="ts">
+import { Colors } from '@as1024/enums'
+import type { Timeout } from '@as1024/types'
 import { defineComponent } from 'vue'
-
-import { Colors } from '../../models/enums'
-import type { Timeout } from '../../ui.types'
 
 const typeIcon: { [key in Colors]?: string } = {
   [Colors.PRIMARY]: 'icon-ph-info_outline',

@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts" setup>
+import { FormFieldSchema, FormFieldType } from '@as1024/types'
+
 import { formFactory } from './form.factory'
 import WuiForm from './WuiForm.vue'
-
-import { FormFieldSchema, FormFieldType } from '~/ui.types'
 
 const schema: FormFieldSchema = [
   {

@@ -81,10 +81,9 @@
 </template>
 
 <script lang="ts">
+import { PagingMeta } from '@as1024/types'
 import { defineComponent } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-
-import { PagingMeta } from '../../ui.types'
 
 export default defineComponent({
   name: `WuiPagination`,

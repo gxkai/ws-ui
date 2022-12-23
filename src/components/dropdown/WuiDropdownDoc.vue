@@ -32,9 +32,9 @@
 </template>
 
 <script lang="ts" setup>
+import { Colors } from '@as1024/enums'
 import { ref } from 'vue'
 
-import { Colors } from '../../models/enums'
 import WuiCheckbox from '../checkbox/WuiCheckbox.vue'
 import WuiInput from '../input/WuiInput.vue'
 import WuiSelect from '../select/WuiSelect.vue'

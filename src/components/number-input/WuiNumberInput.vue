@@ -53,9 +53,8 @@
 </template>
 
 <script lang="ts">
+import type { Timeout } from '@as1024/types'
 import { defineComponent, watch, ref, nextTick, onMounted } from 'vue'
-
-import type { Timeout } from '../../ui.types'
 
 export default defineComponent({
   name: 'WuiNumberInput',

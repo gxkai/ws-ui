@@ -49,9 +49,9 @@
 </template>
 
 <script lang="ts">
+import { PagingMeta } from '@as1024/types'
 import { defineComponent } from 'vue'
 
-import { PagingMeta } from '../../ui.types'
 import WuiButton from '../button/WuiButton.vue'
 import WuiSpinner from '../spinner/WuiSpinner.vue'
 

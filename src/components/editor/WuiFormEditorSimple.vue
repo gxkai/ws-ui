@@ -10,7 +10,15 @@ import Link from '@tiptap/extension-link'
 import Placeholder from '@tiptap/extension-placeholder'
 import StarterKit from '@tiptap/starter-kit'
 import { useEditor, Editor, EditorContent } from '@tiptap/vue-3'
-import { defineComponent, ref, toRefs, onBeforeUnmount, watch, Ref } from 'vue'
+import {
+  defineComponent,
+  ref,
+  toRefs,
+  onBeforeUnmount,
+  watch,
+  Ref,
+  ShallowRef,
+} from 'vue'
 
 import IframeExtension from './tiptapIframeExtension'
 
@@ -67,7 +75,7 @@ export default defineComponent({
             class: 'bg-white',
           },
         },
-      }) as Ref<Editor>
+      }) as unknown as ShallowRef<Editor>
 
       watch(
         content,

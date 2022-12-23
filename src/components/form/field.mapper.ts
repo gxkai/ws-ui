@@ -1,11 +1,11 @@
-import { Component } from 'vue'
-
 import {
   FormField,
   FormFieldType,
   FormController,
   FormFieldBase,
-} from '../../ui.types'
+} from '@as1024/types'
+import { Component } from 'vue'
+
 import WuiCheckbox from '../checkbox/WuiCheckbox.vue'
 import WuiFormEditorField from '../editor/WuiFormEditorField.vue'
 import WuiFormBlank from '../input/WuiFormBlank.vue'

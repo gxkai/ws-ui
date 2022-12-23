@@ -224,7 +224,7 @@ export default defineComponent({
               'bg-white text-gray-500 max-w-screen-lg mx-auto p-4 prose-lg focus:outline-none',
           },
         },
-      }) as Ref<Editor>
+      }) as unknown as Ref<Editor>
     }
 
     watch(

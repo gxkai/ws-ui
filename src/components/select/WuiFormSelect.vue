@@ -20,10 +20,10 @@
 </template>
 
 <script lang="ts">
+import { wuiFormInputPropsBase } from '@as1024/form'
+import { FormFieldSelect } from '@as1024/types'
 import { defineComponent, PropType } from 'vue'
 
-import { FormFieldSelect } from '../../ui.types'
-import { wuiFormInputPropsBase } from '../form/field.props'
 import WuiFormFieldWrapper from '../form/WuiFormFieldWrapper.vue'
 
 export default defineComponent({

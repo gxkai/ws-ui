@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
+import { FormController, FormField } from '@as1024/types'
 import { defineComponent, computed, PropType } from 'vue'
 
-import { FormController, FormField } from '../../ui.types'
 import { formFieldMapper, getFieldProps } from './field.mapper'
 
 export default defineComponent({

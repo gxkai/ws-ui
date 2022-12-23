@@ -24,9 +24,9 @@
 </template>
 
 <script lang="ts">
+import { FieldPublicMeta } from '@as1024/types'
 import { defineComponent } from 'vue'
 
-import { FieldPublicMeta } from '../../ui.types'
 import WuiTableCell from './WuiTableCell.vue'
 
 export default defineComponent({

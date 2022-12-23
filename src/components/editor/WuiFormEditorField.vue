@@ -18,10 +18,10 @@
 </template>
 
 <script lang="ts">
+import { wuiFormInputPropsBase } from '@as1024/form'
+import { FormFieldText } from '@as1024/types'
 import { defineComponent, PropType } from 'vue'
 
-import { FormFieldText } from '../../ui.types'
-import { wuiFormInputPropsBase } from '../form/field.props'
 import WuiFormFieldWrapper from '../form/WuiFormFieldWrapper.vue'
 import WuiFormEditor from './WuiFormEditor.vue'
 

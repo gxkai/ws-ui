@@ -23,7 +23,7 @@
       "~/*": ["src/*"],
     },
     "allowJs": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true

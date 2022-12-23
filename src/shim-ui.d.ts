@@ -4,9 +4,9 @@
 
 // declare module 'vue' {
 //   interface ComponentCustomProperties {
-//     $Message: MessageInstance
-//     $Notification: NotificationInstance
-//     $LoadingBar: LoadingBarInstance
+//     $Message: import('@as1024/message').MessageInstance
+//     $Notification: import('@as1024/notification').NotificationInstance
+//     $LoadingBar: import('@as1024/loading-bar').LoadingBarInstance
 //   }
 // }
 

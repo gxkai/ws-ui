@@ -1,7 +1,7 @@
+import { EDirections } from '@as1024/enums'
+import { TEmit } from '@as1024/types'
 import { ref, onBeforeUpdate, nextTick, computed } from 'vue'
 
-import { EDirections } from '../../models/enums'
-import { TEmit } from '../../ui.types'
 import { CLASS_SELECTED_OPTION } from './constants'
 import { getArrayIndexByDuration } from './helpers'
 import { TOption, TSelectOption, TSelect, TSelectProps } from './types'

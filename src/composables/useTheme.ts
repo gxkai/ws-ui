@@ -7,7 +7,7 @@ export interface ThemeComposition {
 }
 
 export function useTheme(): ThemeComposition {
-  const isDark = useDark()
+  const isDark = useDark() as unknown as Ref<boolean>
   const toggleDark = () => {
     isDark.value = !isDark.value
     return isDark.value

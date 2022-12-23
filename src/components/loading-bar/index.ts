@@ -2,8 +2,7 @@ import { createApp, ComponentPublicInstance } from 'vue'
 
 import WuiLoadingBar from './WuiLoadingBar.vue'
 
-let instance: ComponentPublicInstance =
-  null as unknown as ComponentPublicInstance
+let instance: ComponentPublicInstance = null as unknown as LoadingBarInstance
 
 if (document) {
   const tempDiv = document.createElement('div')
@@ -11,7 +10,7 @@ if (document) {
   document.body.appendChild(instance.$el)
 }
 
-export interface LoadingBarInstance extends Function {
+export interface LoadingBarInstance extends ComponentPublicInstance {
   start(): void
   update(value: number): void
   finish(onClose?: () => void): void
@@ -26,7 +25,7 @@ interface LoadingBarOptions {
 
 export const LoadingBar = (
   options: LoadingBarOptions = {}
-): ComponentPublicInstance => {
+): LoadingBarInstance => {
   const onClose = options.onClose
   options.onClose = () => {
     LoadingBar.finish({ onClose })
@@ -39,7 +38,7 @@ export const LoadingBar = (
     ...options,
   })
 
-  return instance
+  return instance as unknown as LoadingBarInstance
 }
 
 LoadingBar.start = (options: LoadingBarOptions = {}): void => {

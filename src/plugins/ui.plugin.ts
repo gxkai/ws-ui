@@ -50,24 +50,23 @@ import { LoadingBar } from '@as1024/loading-bar'
 import { Message } from '@as1024/message'
 import { Notification } from '@as1024/notification'
 import FloatingVue from 'floating-vue'
-import type { App, Ref } from 'vue'
+import type { App, Ref, PluginInstallFunction } from 'vue'
 import 'floating-vue/dist/style.css'
-
 /**
  * WyrdUI plugin
  *
  * @public
  */
-export function install(app: App, options): void {
+export const install: PluginInstallFunction = (app: App, options: any) => {
   app.use(FloatingVue)
 
-  app.config.globalProperties.$Message = Message
+  app.config.globalProperties.$Message = Message as any
   app.provide('$Message', Message)
 
-  app.config.globalProperties.$Notification = Notification
+  app.config.globalProperties.$Notification = Notification as any
   app.provide('$Notification', Notification)
 
-  app.config.globalProperties.$LoadingBar = LoadingBar
+  app.config.globalProperties.$LoadingBar = LoadingBar as any
   app.provide('$LoadingBar', LoadingBar)
 
   if (options?.components) {

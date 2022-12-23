@@ -24,9 +24,9 @@
 </template>
 
 <script lang="ts">
+import { FormField } from '@as1024/types'
 import { defineComponent, PropType } from 'vue'
 
-import { FormField } from '../../ui.types'
 import { wuiFormInputWrapperPropsBase } from './field.props'
 import WuiFormMessage from './WuiFormMessage.vue'
 

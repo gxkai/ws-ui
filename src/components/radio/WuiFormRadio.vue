@@ -22,10 +22,10 @@
 </template>
 
 <script lang="ts">
+import { wuiFormInputPropsBase } from '@as1024/form'
+import type { FormFieldRadio } from '@as1024/types'
 import { defineComponent, PropType } from 'vue'
 
-import type { FormFieldRadio } from '../../ui.types'
-import { wuiFormInputPropsBase } from '../form/field.props'
 import WuiFormFieldWrapper from '../form/WuiFormFieldWrapper.vue'
 
 export default defineComponent({

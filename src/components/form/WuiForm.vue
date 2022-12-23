@@ -74,9 +74,9 @@
 </template>
 
 <script lang="ts">
+import type { FormController } from '@as1024/types'
 import { defineComponent, toRefs } from 'vue'
 
-import type { FormController } from '../../ui.types'
 import WuiButton from '../button/WuiButton.vue'
 import WuiPopover from '../popover/WuiPopover.vue'
 import WuiFormField from './WuiFormField.vue'

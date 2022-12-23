@@ -12,10 +12,9 @@
 </template>
 
 <script lang="ts">
+import { wuiFormInputPropsBase } from '@as1024/form'
+import { FormFieldText } from '@as1024/types'
 import { defineComponent, PropType } from 'vue'
-
-import { FormFieldText } from '../../ui.types'
-import { wuiFormInputPropsBase } from '../form/field.props'
 
 export default defineComponent({
   props: {

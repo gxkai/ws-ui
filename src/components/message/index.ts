@@ -1,6 +1,6 @@
+import { Colors } from '@as1024/enums'
 import { createApp, ComponentPublicInstance } from 'vue'
 
-import { Colors } from '../../models/enums'
 import MessageVue from './WuiMessage.vue'
 
 declare type MessageFactory = (

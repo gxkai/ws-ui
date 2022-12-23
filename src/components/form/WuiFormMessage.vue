@@ -11,9 +11,8 @@
 </template>
 
 <script lang="ts">
+import type { FormMessage } from '@as1024/types'
 import { computed, defineComponent, toRefs } from 'vue'
-
-import type { FormMessage } from '../../ui.types'
 
 export default defineComponent({
   props: {

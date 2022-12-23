@@ -1,6 +1,6 @@
-import { presetIcons, presetTypography, presetWind } from 'unocss'
+import { Preset, presetIcons, presetTypography, presetWind } from 'unocss'
 
-export const presets = [
+export const presets: Preset[] = [
   presetWind(),
   presetTypography({}),
   presetIcons({

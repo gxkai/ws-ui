@@ -98,6 +98,7 @@ module.exports = defineConfig({
         },
       },
     ],
+    'node/no-extraneous-import': 'off',
   },
   overrides: [
     {

@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts" setup>
+import type { WyrdNavItem } from '@as1024/types'
 import { defineProps } from 'vue'
 
-import type { WyrdNavItem } from '../../ui.types'
 import WuiNav from './WuiNav.vue'
 
 defineProps({

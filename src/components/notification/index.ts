@@ -25,7 +25,7 @@ declare type NotificationFactory = (
   options: Partial<NotificationOptions>
 ) => ComponentPublicInstance
 
-export interface NotificationInstance extends Function {
+export interface NotificationInstance extends ComponentPublicInstance {
   primary: NotificationFactory
   success: NotificationFactory
   warning: NotificationFactory
@@ -33,13 +33,13 @@ export interface NotificationInstance extends Function {
   close: (id: number, onClose?: () => void) => void
 }
 
-const notifications: ComponentPublicInstance[] = []
+const notifications: NotificationInstance[] = []
 
 let idStart = 0
 
 export const Notification = (
   options: Partial<NotificationOptions> = {}
-): ComponentPublicInstance => {
+): NotificationInstance => {
   options.placement = options.placement || Positions.TR
   const onClose = options.onClose
   const id = idStart++
@@ -49,7 +49,9 @@ export const Notification = (
   }
 
   const tempDiv = document.createElement('div')
-  const instance = createApp(NotificationVue).mount(tempDiv)
+  const instance = createApp(NotificationVue).mount(
+    tempDiv
+  ) as unknown as NotificationInstance
 
   const newData = Object.assign(options, { id })
   for (const [key, value] of Object.entries(newData)) {

@@ -5,9 +5,8 @@
 </template>
 
 <script lang="ts">
+import { RouteLocationRaw } from '@as1024/types'
 import { defineComponent, computed } from 'vue'
-
-import { RouteLocationRaw } from '../../ui.types'
 
 export default defineComponent({
   name: 'WuiLink',

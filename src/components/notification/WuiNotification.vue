@@ -40,11 +40,10 @@
 </template>
 
 <script lang="ts">
+import { Colors, Positions } from '@as1024/enums'
+import { typeIcon } from '@as1024/message'
+import type { Timeout } from '@as1024/types'
 import { defineComponent } from 'vue'
-
-import { typeIcon } from '../../components/message/constants'
-import { Colors, Positions } from '../../models/enums'
-import type { Timeout } from '../../ui.types'
 
 const colorTypes: { [key in Colors]?: string } = {
   [Colors.PRIMARY]: '#3051ff',

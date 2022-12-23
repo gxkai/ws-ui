@@ -74,12 +74,12 @@
 </template>
 
 <script lang="ts">
+import { clickOutside } from '@as1024/directives'
+import { Positions, EDirections } from '@as1024/enums'
+import { useCheckSlot } from '@as1024/hooks'
+import { TProps, TEmit } from '@as1024/types'
 import { defineComponent, computed, PropType } from 'vue'
 
-import { clickOutside } from '../../directives'
-import { useCheckSlot } from '../../hooks'
-import { Positions, EDirections } from '../../models/enums'
-import { TProps, TEmit } from '../../ui.types'
 import { ALLOWED_POSITION, CLASS_SELECTED_OPTION } from './constants'
 import { useSelect } from './hooks'
 import { TOption, TSelectProps } from './types'
