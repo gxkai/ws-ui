@@ -3,7 +3,7 @@ import isEmpty from 'validator/lib/isEmpty'
 import isSlug from 'validator/lib/isSlug'
 import isStrongPassword from 'validator/lib/isStrongPassword'
 
-import { FormInputValidator } from '~/ui.types'
+import { FormInputValidator } from '@as1024/types'
 
 export const required: FormInputValidator = (value, opts) => {
   const valid = !!value && !isEmpty(String(value))

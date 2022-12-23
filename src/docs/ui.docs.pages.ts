@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 
-import type { WyrdPageDefinition } from '~/ui.types'
+import type { WyrdPageDefinition } from '@as1024/types'
 
 export const pages: WyrdPageDefinition[] = [
   {

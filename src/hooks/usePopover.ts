@@ -1,7 +1,7 @@
 import { ref, Ref, nextTick, computed, toRef } from 'vue'
 
-import { Positions } from '../models/enums'
-import type { Timeout } from '../ui.types'
+import { Positions } from '@as1024/enums'
+import type { Timeout } from '@as1024/types'
 
 // REFACTOR HOOK
 

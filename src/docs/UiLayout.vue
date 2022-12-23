@@ -43,8 +43,9 @@
 </template>
 
 <script lang="ts" setup>
+import { WuiLink, WuiNav } from '@as1024/components'
+
 import WyrdLogoSVG from '../assets/wyrd-logo.svg'
-import { WuiLink, WuiNav } from '../components'
 import { useTheme } from '../composables/useTheme'
 import { buildNavFromPageDefinitions } from '../helpers'
 import { pages } from './ui.docs.pages'

@@ -25,7 +25,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 
-import { FormFieldText } from '../../ui.types'
+import { FormFieldText } from '@as1024/types'
 import { wuiFormInputPropsBase } from '../form/field.props'
 import WuiFormFieldWrapper from '../form/WuiFormFieldWrapper.vue'
 

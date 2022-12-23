@@ -28,8 +28,8 @@
 import { UseTimeAgo } from '@vueuse/components'
 import { computed, toRefs, defineComponent } from 'vue'
 
-import { FieldPublicMeta, FormFieldType } from '../../ui.types'
-import { get } from '../../utilities'
+import { FieldPublicMeta, FormFieldType } from '@as1024/types'
+import { get } from '@as1024/helpers'
 import WuiTooltip from '../tooltip/WuiTooltip.vue'
 
 export default defineComponent({

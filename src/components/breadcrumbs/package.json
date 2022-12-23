@@ -1,0 +1,36 @@
+{
+  "name": "@as1024/breadcrumbs",
+  "version": "0.0.0-alpha.0",
+  "description": "",
+  "repository": "",
+  "license": "MIT",
+  "author": "Xukai gu ksgxk@icloud.com",
+  "exports": {
+    ".": {
+      "require": "./dist/breadcrumbs.cjs.js",
+      "default": "./dist/breadcrumbs.esm.js"
+    }
+  },
+  "main": "dist/breadcrumbs.cjs.js",
+  "module": "dist/breadcrumbs.esm.js",
+  "types": "./dist/breadcrumbs.cjs.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && concurrently yarn:build:*",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "mock": "esno ./src/mock.ts",
+    "watch": "concurrently yarn:watch:*",
+    "watch:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps --watch",
+    "watch:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps --watch",
+    "watch:types": "cross-env tsc --emitDeclarationOnly --declaration --declarationDir dist/types --watch --incremental"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "vue": "^3.2.45"
+  }
+}
