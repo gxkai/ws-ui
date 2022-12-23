@@ -44,10 +44,10 @@
 
 <script lang="ts" setup>
 import { WuiLink, WuiNav } from '@as1024/components'
+import { useTheme } from '@as1024/composables'
+import { buildNavFromPageDefinitions } from '@as1024/helpers'
 
 import WyrdLogoSVG from '../assets/wyrd-logo.svg'
-import { useTheme } from '../composables/useTheme'
-import { buildNavFromPageDefinitions } from '../helpers'
 import { pages } from './ui.docs.pages'
 
 const { toggleDark } = useTheme()

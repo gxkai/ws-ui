@@ -1,3 +1,4 @@
+import { WyrdUI } from '@as1024/plugins'
 import { createHead } from '@vueuse/head'
 import { createApp } from 'vue'
 import {
@@ -5,8 +6,6 @@ import {
   createWebHistory,
   createMemoryHistory,
 } from 'vue-router'
-
-import { WyrdUI } from '@as1024/plugins'
 
 import App from './App.vue'
 import { docsRoutes as routes } from './ui.docs.routes'

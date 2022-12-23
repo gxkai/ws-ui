@@ -1,9 +1,8 @@
-import type { Component, Ref } from 'vue'
-import type { RouteLocationRaw, _RouteRecordBase } from 'vue-router'
-
 import { LoadingBarInstance } from '@as1024/loading-bar'
 import { MessageInstance } from '@as1024/message'
 import { NotificationInstance } from '@as1024/notification'
+import type { Component, Ref } from 'vue'
+import type { RouteLocationRaw, _RouteRecordBase } from 'vue-router'
 
 export type { RouteLocationRaw } from 'vue-router'
 

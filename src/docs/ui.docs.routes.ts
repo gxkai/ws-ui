@@ -1,6 +1,6 @@
+import { buildRouteItemFromPageDefinition } from '@as1024/helpers'
 import { defineAsyncComponent, Component } from 'vue'
 
-import { buildRouteItemFromPageDefinition } from '../helpers'
 import { pages } from './ui.docs.pages'
 
 const children = pages.map((p) => buildRouteItemFromPageDefinition(p, 'ui'))

@@ -1,6 +1,5 @@
-import type { Component } from 'vue'
-
 import type { WyrdPageDefinition } from '@as1024/types'
+import type { Component } from 'vue'
 
 export const pages: WyrdPageDefinition[] = [
   {
@@ -14,8 +13,8 @@ export const pages: WyrdPageDefinition[] = [
   {
     slug: 'components',
     title: 'Components',
-    component: (): Component =>
-      import('../components/routing/WuiRouteWrapper.vue'),
+    component: async (): Promise<Component> =>
+      (await import('@as1024/routing')).WuiRouteWrapper,
     redirect: { name: 'ui.components.home' },
     children: [
       {
