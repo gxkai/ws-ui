@@ -23,12 +23,15 @@ interface LoadingBarOptions {
   onClose?: () => void
 }
 
-export const LoadingBar = (
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const LoadingBar: LoadingBarInstance &
+  ((options: LoadingBarOptions) => LoadingBarInstance) = (
   options: LoadingBarOptions = {}
 ): LoadingBarInstance => {
   const onClose = options.onClose
   options.onClose = () => {
-    LoadingBar.finish({ onClose })
+    LoadingBar.finish(onClose)
   }
 
   const dataObj = instance?.$data as Record<string, any>
@@ -64,12 +67,10 @@ interface LoadingBarFinishOpts {
   id?: number
 }
 
-LoadingBar.finish = (opts: LoadingBarFinishOpts = {}): void => {
+LoadingBar.finish = (onClose?: () => void): void => {
   const dataObj = instance?.$data as Record<string, any>
   dataObj.started = false
   dataObj.progress = 100
   dataObj.height = 0
-  if (opts.onClose) {
-    opts.onClose()
-  }
+  onClose?.()
 }

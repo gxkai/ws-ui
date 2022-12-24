@@ -17,7 +17,8 @@ export default {
     sourcemap: true,
     lib: {
       entry: resolve(process.cwd(), 'src/exports'),
-      name: 'WyrdUI',
+      name: 'wui',
+      filename: 'wui',
     },
     rollupOptions: {
       // vite (v2.9.9) tree shaking doesn't work without this
@@ -87,7 +88,7 @@ export default {
     // https://github.com/btd/rollup-plugin-visualizer
     visualizer({
       open: false,
-      title: 'WyrdUI Bundle Visualizer',
+      title: 'WUI Bundle Visualizer',
     }),
   ],
   css: {

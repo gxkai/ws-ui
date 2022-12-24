@@ -1,6 +1,6 @@
 # Contributing
 
-## Symlink WyrdUI folder during development.
+## Symlink WUI folder during development.
 
 Use [`yarn link`](https://classic.yarnpkg.com/en/docs/cli/link) to use local package during development in your own project
 

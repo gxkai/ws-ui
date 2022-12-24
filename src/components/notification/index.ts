@@ -37,7 +37,10 @@ const notifications: NotificationInstance[] = []
 
 let idStart = 0
 
-export const Notification = (
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const Notification: NotificationInstance &
+  ((options: Partial<NotificationOptions>) => NotificationInstance) = (
   options: Partial<NotificationOptions> = {}
 ): NotificationInstance => {
   options.placement = options.placement || Positions.TR

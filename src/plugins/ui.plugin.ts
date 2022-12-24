@@ -50,29 +50,34 @@ import { LoadingBar } from '@as1024/loading-bar'
 import { Message } from '@as1024/message'
 import { Notification } from '@as1024/notification'
 import FloatingVue from 'floating-vue'
-import type { App, Ref, PluginInstallFunction } from 'vue'
+import type { App, Ref } from 'vue'
 import 'floating-vue/dist/style.css'
 /**
- * WyrdUI plugin
+ * WUI plugin
  *
  * @public
  */
-export const install: PluginInstallFunction = (app: App, options: any) => {
+export const install = (
+  app: App,
+  options?: {
+    components: Plugin[]
+  }
+) => {
   app.use(FloatingVue)
 
-  app.config.globalProperties.$Message = Message as any
+  app.config.globalProperties.$Message = Message
   app.provide('$Message', Message)
 
-  app.config.globalProperties.$Notification = Notification as any
+  app.config.globalProperties.$Notification = Notification
   app.provide('$Notification', Notification)
 
-  app.config.globalProperties.$LoadingBar = LoadingBar as any
+  app.config.globalProperties.$LoadingBar = LoadingBar
   app.provide('$LoadingBar', LoadingBar)
 
   if (options?.components) {
-    for (const [key, value] of options.components) {
-      app.component(key, (value as any).default)
-    }
+    options.components.forEach((c) => {
+      app.component(c.name, c)
+    })
   } else {
     app.component('WuiPropsTable', WuiPropsTable)
     app.component('WuiCodeExample', WuiCodeExample)
@@ -125,18 +130,18 @@ export const install: PluginInstallFunction = (app: App, options: any) => {
     app.component('WuiCollapseItem', WuiCollapseItem)
   }
 
-  const $WyrdUI = {
+  const $WUI = {
     drawers: [] as Ref[],
     modals: [] as Ref[],
   }
 
-  app.config.globalProperties.$WyrdUI = $WyrdUI
-  app.provide('$WyrdUI', WyrdUI)
+  app.config.globalProperties.$WUI = $WUI
+  app.provide('$WUI', WUI)
 }
 
 /**
- * WyrdUI plugin
+ * WUI plugin
  *
  * @public
  */
-export const WyrdUI = { install }
+export const WUI = { install }

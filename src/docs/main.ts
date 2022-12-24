@@ -1,4 +1,4 @@
-import { WyrdUI } from '@as1024/plugins'
+import { WUI } from '@as1024/plugins'
 import { createHead } from '@vueuse/head'
 import { createApp } from 'vue'
 import {
@@ -24,7 +24,7 @@ const router = createVueRouter({
 })
 
 const app = createApp(App)
-app.use(WyrdUI)
+app.use(WUI)
 app.use(router)
 app.use(createHead())
 app.mount('#app')

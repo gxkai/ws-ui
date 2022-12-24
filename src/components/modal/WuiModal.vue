@@ -84,8 +84,7 @@ export default defineComponent({
       () => props.modelValue,
       async (active: boolean) => {
         await nextTick()
-        const modalsList =
-          Equal!.appContext.config.globalProperties.$WyrdUI.modals
+        const modalsList = Equal!.appContext.config.globalProperties.$WUI.modals
         if (modalRef.value) {
           if (active) {
             modalsList.push(modalBody.value)

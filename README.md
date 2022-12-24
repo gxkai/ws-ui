@@ -10,11 +10,11 @@ A fairly modern Vue 3 component library.
 
 ```ts
 import { createApp } from 'vue'
-import { WyrdUI } from 'wyrd-ui'
+import { WUI } from 'wyrd-ui'
 import 'wyrd-ui/dist/style.css'
 
 const app = createApp(App)
-app.use(WyrdUI)
+app.use(WUI)
 ```
 ## Use
 
@@ -110,7 +110,7 @@ The following are some strategies to reduce the size of your library:
 #### Externalization
 
 If you expect the client app of your library may also need the same dependency, you may
-externalize the dependency. For example, to exclude WyrdUI from your library build
+externalize the dependency. For example, to exclude WUI from your library build
 artifact, in [vite.config.ts](vite.config.ts), you may have
 
 ```js

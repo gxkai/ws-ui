@@ -1,4 +1,4 @@
-import { Colors } from '../../models/enums'
+import { Colors } from '@as1024/enums'
 
 export const ALLOWED_TYPES = [
   Colors.NEUTRAL,

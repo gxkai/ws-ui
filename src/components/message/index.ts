@@ -2,7 +2,7 @@ import { Colors } from '@as1024/enums'
 import { createApp, ComponentPublicInstance } from 'vue'
 
 import MessageVue from './WuiMessage.vue'
-
+export * from './constants'
 declare type MessageFactory = (
   options: IMessageOptions
 ) => ComponentPublicInstance
@@ -33,15 +33,17 @@ const messageTypes = [
 const messages: ComponentPublicInstance[] = []
 
 let idStart = 0
-
-export const Message = (
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const Message: MessageInstance &
+  ((options: IMessageOptions) => ComponentPublicInstance) = (
   options: IMessageOptions = {}
 ): ComponentPublicInstance => {
   const onClose = options.onClose
   const id = idStart++
 
   options.onClose = () => {
-    Message.close(id, onClose)
+    Message?.close?.(id, onClose)
   }
 
   const tempDiv = document.createElement('div')

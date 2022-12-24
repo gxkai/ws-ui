@@ -1,9 +1,8 @@
-import { LoadingBarInstance } from '@as1024/loading-bar'
-import { MessageInstance } from '@as1024/message'
-import { NotificationInstance } from '@as1024/notification'
-import type { Component, Ref } from 'vue'
+import { LoadingBar } from '@as1024/loading-bar'
+import { Message } from '@as1024/message'
+import { Notification } from '@as1024/notification'
+import type { AppContext, Component, Ref, Plugin } from 'vue'
 import type { RouteLocationRaw, _RouteRecordBase } from 'vue-router'
-
 export type { RouteLocationRaw } from 'vue-router'
 
 /**
@@ -384,8 +383,15 @@ export type AlertType = 'info' | 'warn' | 'error' | 'success'
 
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $Message: MessageInstance
-    $Notification: NotificationInstance
-    $LoadingBar: LoadingBarInstance
+    $Message: typeof Message
+    $Notification: typeof Notification
+    $LoadingBar: typeof LoadingBar
   }
 }
+export type SFCWithInstall<T> = T & Plugin
+
+export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
+  _context: AppContext | null
+}
+
+export type MaybeRef<T> = T | Ref<T>
